@@ -1,0 +1,65 @@
+//API 1 POST Method - register user to check valid registered or not
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "name": "Adam Richard",
+  "password": "richard_567",
+  "gender": "male",
+  "location": "Detroit"
+}
+###
+
+// API 1 - to check password is too short or not
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "d_56"
+}
+###
+
+//API 2 POST Method - login user to check successful login or not
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567"
+}
+###
+
+//API 2 POST Method - login user to check valid password or not
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richad_567"
+}
+###
+
+//API 2 POST Method - login user to check valid user or not
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "ada_richard",
+  "password": "richard_567"
+}
+###
+
+
+//API 3 PUT Method - change password call to check password changed or not
+PUT http://localhost:3000/change-password
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "oldPassword": "richard_567",
+  "newPassword": "richard@123"
+}
+###
+
